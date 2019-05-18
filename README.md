@@ -4,24 +4,17 @@
 从文本文件读入一个上下文无关的算符文法，构造算符优先分析表并以文本文件形式输出。
 
 ## 文件列表
-analyTable.h 算符优先分析表类的头文件
-
-analyTable.cpp 算符优先分析表类的函数实现
-
-main.cpp 主程序
-
-input.txt 输入文件
-
-temp.txt 生成的中间文件
-
-output.txt 输出文件
+analyTable.h 算符优先分析表类的头文件  
+analyTable.cpp 算符优先分析表类的函数实现  
+main.cpp 主程序  
+input.txt 输入文件  
+temp.txt 生成的中间文件  
+output.txt 输出文件  
 
 ## 输入文件格式
-在input.txt中，每行写一条产生式，各符号间需使用一个空格隔开。
+在input.txt中，每行写一条产生式，各符号间需使用一个空格隔开。  
 
 ## 使用说明
-1.由于编写环境为macOS，因而未生成exe可执行文件。所以在windows系统下使用时需要在main.cpp中加入 system("PAUSE"); 语句，同时因为使用了部分C++11的特性以及多文件，因此编译时使用g++ *.cpp -o main.exe -std=c++11 命令来进行编译。
-
-2.使用前请保证input.txt文件已存在且内容符合文件格式中的要求。
-
-3.运行程序后会在控制台输出算符优先分析表并输出到output.txt文件。
+1.由于编写环境为macOS，因而未生成exe可执行文件。所以在windows系统下使用时需要在main.cpp中加入 system("PAUSE"); 语句，同时因为使用了部分C++11的特性以及多文件，因此编译时使用g++ *.cpp -o main.exe -std=c++11 命令来进行编译。  
+2.使用前请保证input.txt文件已存在且内容符合文件格式中的要求。  
+3.运行程序后会在控制台输出算符优先分析表并输出到output.txt文件。  
