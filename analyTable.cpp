@@ -65,6 +65,7 @@ void analyTable::_generateTempFile() {
 
         for (auto str : productions) {
             _removeSpace(str);
+            // 若输入的某个产生式右端为空则自动跳过
             if (str != "") {
                 productionSet.insert(_split(str, " "));
                 tempOutput << nonSymbol << " -> " << str << endl;
@@ -282,42 +283,6 @@ void analyTable::build() {
     } catch (exception &ex) {
         cerr << ex.what() << endl;
     }
-
-    //    for(auto i:production) {
-    //        string temp=i.first;
-    //        for(auto j:i.second) {
-    //            cout<<temp<<" -> ";
-    //            for(auto k:j) {
-    //                cout<<k<<' ';
-    //            }
-    //            cout<<endl;
-    //        }
-    //    }
-    //
-    //    for(auto i:nonSymbolList) {
-    //        cout<<i<<'\t';
-    //    }
-    //    cout<<'\n';
-    //    for(auto i:symbolList) {
-    //        cout<<i<<'\t';
-    //    }
-    //    cout<<'\n';
-    //
-    //    for(auto i:leftSet) {
-    //        cout<<i.first<<' '<<"left ";
-    //        for(auto j:i.second) {
-    //            cout<<j<<' ';
-    //        }
-    //        cout<<endl;
-    //    }
-    //
-    //    for(auto i:rightSet) {
-    //        cout<<i.first<<' '<<"right ";
-    //        for(auto j:i.second) {
-    //            cout<<j<<' ';
-    //        }
-    //        cout<<endl;
-    //    }
 }
 
 vector<string> analyTable::_split(const string &str, const string &delim) {
